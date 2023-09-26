@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background-color: #EAEFF8;
+}
+
+.title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebar {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: #ffffff;
+    height: 100%;
+    box-shadow: 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 10px 10px 0;
+    padding-top: 20px;
+}
+
+#klamma {
+    width: 50px;
+}
+
+#sidebar-logo {
+    display: flex;
+    align-items: center;
+    color: #091e8a;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.list {
+    display: grid;
+    align-content: start;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 'header header' 'cards cards' 'limits recent-activities' 'payments recent-activities';
+}
+
+#header {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    grid-area: header;
+    gap: 24px;
+}
+
+#header img {
+    justify-self: end;
+    mix-blend-mode: multiply;
+}
+
+#cards {
+    display: grid;
+    grid-area: cards;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cards img {
+    mix-blend-mode: multiply;
+}
+
+.card {
+    display: grid;
+    border: 1px black solid;
+}
+
+#limits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: limits;
+}
+
+#limits .limit {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 'img title' 'img text';
+}
+
+#limits .limit img {
+    grid-area: img;
+    mix-blend-mode: multiply;
+}
+
+#limits .limit h4 {
+    grid-area: title;
+}
+
+#limits .limit p {
+    grid-area: text;
+}
+
+#int-payments {
+    display: grid;
+    grid-area: payments;
+}
+
+#int-payments .summary {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#int-payments .payment-status {
+    display: grid;
+}
+
+#recent-activities {
+    display: grid;
+    grid-area: recent-activities;
+}
+
+#recent-activities .activity {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
