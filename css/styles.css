@@ -43,7 +43,6 @@ body {
     display: grid;
     grid-template-rows: auto 1fr;
     background-color: #ffffff;
-    height: 100%;
     box-shadow: 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding-top: 20px;
@@ -64,18 +63,18 @@ body {
     padding: 8px 16px 16px 16px;
 }
 
-#klamma {
+#sidebar #klamma {
     width: 36px;
 }
 
-.list {
+#sidebar .list {
     display: grid;
     align-content: start;
     gap: 8px;
     padding: 8px 16px 16px 16px;
 }
 
-.list button {
+#sidebar .list button {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -88,7 +87,7 @@ body {
     font-size: 16px
 }
 
-.list button:hover {
+#sidebar .list button:hover {
     background-color: #dadae6;
     border-radius: 5px;
     color: #091c7e;
@@ -96,10 +95,11 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
     grid-template-areas: 'header header' 'cards cards' 'limits recent-activities' 'payments recent-activities';
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto auto 148px auto;
+    align-items: start;
     overflow-y: auto;
-    overflow-x: auto;
 }
 
 #header {
@@ -125,9 +125,16 @@ main {
 #cards {
     display: grid;
     grid-area: cards;
-    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cards-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto;
     gap: 24px;
-    padding: 32px;
+    padding: 40px;
 }
 
 #cards img {
@@ -138,7 +145,7 @@ main {
 
 #cards .card {
     display: grid;
-    padding: 16px;
+    padding: 24px;
     width: 320px;
     height: 200px;
     border: none;
@@ -180,11 +187,10 @@ main {
 
 #limits .limit {
     display: grid;
+    grid-template-areas: 'img title' 'img text';
+    grid-template-columns: auto 1fr;
     align-items: center;
     align-content: center;
-    grid-template-columns: auto 1fr;
-    grid-template-areas: 'img title' 'img text';
-    margin: 8px;
     gap: 8px;
 }
 
@@ -211,7 +217,8 @@ main {
     display: grid;
     grid-area: payments;
     padding: 32px;
-    margin: 20px;
+    margin: 0px 20px;
+    gap: 8px;
 }
 
 #int-payments .summary {
@@ -219,6 +226,7 @@ main {
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
+    padding: 16px;
 }
 
 #int-payments .payment-status {
@@ -229,22 +237,21 @@ main {
     padding: 8px;
     border-right: #ffffff 0.6px solid;
     border-left: #ffffff 0.6px solid;
-
+    cursor: pointer;
 }
 
-#int-payments .status {
+#int-payments .payment-status .status {
     display: grid;
     align-items: center;
     justify-content: center;
     width: 104px;
-    cursor: pointer;
     padding: 16px;
     font-size: 14px;
     font-weight: 600;
     color: #8f8888;
 }
 
-#int-payments .counter {
+#int-payments .payment-status .counter {
     justify-self: center;
     font-size: 20px;
     font-weight: 600;
@@ -268,7 +275,6 @@ main {
 }
 
 #recent-activities .activity .name-desc {
-    display: grid;
     grid-template-rows: auto auto;
     padding: 8px;
     gap: 4px;
@@ -279,8 +285,42 @@ main {
     font-weight: 200;
 }
 
-#recent-activities .activity-value {
+#recent-activities .activity .activity-value {
     justify-self: end;
     font-size: 16px;
     font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 75px 1fr;
+    }
+
+    #sidebar {
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sidebar #sidebar-logo h1 {
+        display: none;
+    }
+
+    #sidebar .list {
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    #sidebar .list button {
+        grid-template-columns: auto;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    #sidebar .list button label {
+        display: none;
+    }
+
 }
