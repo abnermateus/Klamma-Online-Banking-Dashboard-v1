@@ -419,7 +419,7 @@ main {
   }
 
   #int-payments .payment-status {
-    padding: 8px 32px 8px 32px;
+    padding: 8px 24px 8px 24px;
     width: 60px;
     border: none;
   }
@@ -438,7 +438,7 @@ main {
   }
 
   #recent-activities .activity {
-    gap: 8px;
+    padding: 8px
   }
 
   #recent-activities .activity .name-desc {
