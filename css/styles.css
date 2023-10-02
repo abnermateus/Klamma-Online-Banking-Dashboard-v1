@@ -1,326 +1,459 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif, 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif, "Roboto", sans-serif;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8f8f8;
 }
 
 .title-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
 }
 
 .button {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border: none;
-    border-radius: 3px;
-    background-color: #dadae6;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    color: #8f8888;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #dadae6;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8f8888;
 }
 
 .day {
-    font-size: 12px;
-    color: #8f8888;
+  font-size: 12px;
+  color: #8f8888;
 }
 
 #sidebar {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    background-color: #ffffff;
-    box-shadow: 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding-top: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #ffffff;
+  box-shadow: 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-top: 20px;
 }
 
 #sidebar h1 {
-    font-size: 25px;
-    font-weight: 600;
-    color: #091c7e;
-    padding: 0px 16px 0px 16px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #091c7e;
+  padding: 0px 16px 0px 16px;
 }
 
 #sidebar-logo {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 16px 16px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px 16px 16px;
 }
 
 #sidebar #klamma {
-    width: 36px;
+  width: 36px;
 }
 
 #sidebar .list {
-    display: grid;
-    align-content: start;
-    gap: 8px;
-    padding: 8px 16px 16px 16px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 8px 16px 16px 16px;
 }
 
 #sidebar .list button {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    text-align: left;
-    gap: 16px;
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 16px
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  text-align: left;
+  gap: 16px;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 #sidebar .list button:hover {
-    background-color: #dadae6;
-    border-radius: 5px;
-    color: #091c7e;
+  background-color: #dadae6;
+  border-radius: 5px;
+  color: #091c7e;
 }
 
 main {
-    display: grid;
-    grid-template-areas: 'header header' 'cards cards' 'limits recent-activities' 'payments recent-activities';
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: auto auto 148px auto;
-    align-items: start;
-    overflow-y: auto;
+  display: grid;
+  grid-template-areas: "header header" "cards cards" "limits recent-activities" "payments recent-activities";
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: auto auto 148px auto;
+  align-items: start;
+  overflow-y: auto;
 }
 
 #header {
-    display: grid;
-    grid-template-columns: auto auto 1fr;
-    align-items: center;
-    grid-area: header;
-    gap: 8px;
-    padding: 32px 16px 16px 32px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  grid-area: header;
+  gap: 8px;
+  padding: 32px 16px 16px 32px;
 }
 
 #header h1 {
-    font-size: 25px;
-    font-weight: 600;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 #header img {
-    justify-self: end;
-    mix-blend-mode: multiply;
-    width: 48px;
+  justify-self: end;
+  mix-blend-mode: multiply;
+  width: 48px;
 }
 
 #cards {
-    display: grid;
-    grid-area: cards;
+  display: grid;
+  grid-area: cards;
 }
 
-#cards-carousel {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-    align-items: center;
-    overflow-x: auto;
-    gap: 24px;
-    padding: 40px;
-}
-
-#cards img {
-    justify-self: start;
-    mix-blend-mode: multiply;
-    width: 32px;
+#cards #cards-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  overflow-x: auto;
+  gap: 24px;
+  padding: 40px;
 }
 
 #cards .card {
-    display: grid;
-    padding: 24px;
-    width: 320px;
-    height: 200px;
-    border: none;
-    border-radius: 10px;
-    background-color: #ffffff;
+  display: grid;
+  padding: 24px;
+  width: 320px;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#cards .card img {
+  justify-self: start;
+  mix-blend-mode: multiply;
+  width: 32px;
 }
 
 #cards .card .current-amount {
-    color: black;
-    font-size: 20px;
-    font-weight: 200;
+  color: black;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 #cards .card .card-number,
 .card-date {
-    color: #ccc7c7;
-    font-size: 15px;
-    font-weight: 600;
+  color: #ccc7c7;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 #cards .card:active {
-    transform: scale(1.1);
-    background-image: linear-gradient(to bottom left, #BD6E7E, #ffffff, #142FBC, #0B0D30);
+  transform: scale(1.1);
+  background-image: linear-gradient(to bottom left,
+      #bd6e7e,
+      #ffffff,
+      #142fbc,
+      #0b0d30);
 }
 
 #cards .card:active .current-amount {
-    color: white;
+  color: white;
 }
 
 #limits {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-area: limits;
-    padding: 32px;
-    margin: 8px 16px 8px 32px;
-    border-bottom: #ffffff 0.6px solid;
-    border-top: #ffffff 0.6px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: limits;
+  padding: 32px;
+  margin: 8px 16px 8px 32px;
+  border-bottom: #ffffff 0.6px solid;
+  border-top: #ffffff 0.6px solid;
 }
 
 #limits .limit {
-    display: grid;
-    grid-template-areas: 'img title' 'img text';
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    align-content: center;
-    gap: 8px;
+  display: grid;
+  grid-template-areas: "img title" "img text";
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  align-content: center;
+  gap: 8px;
 }
 
 #limits .limit img {
-    grid-area: img;
-    mix-blend-mode: multiply;
+  grid-area: img;
+  mix-blend-mode: multiply;
 }
 
 #limits .limit h4 {
-    grid-area: title;
+  grid-area: title;
 }
 
 #limits .limit p {
-    grid-area: text;
-    color: #091c7e;
-    font-size: 10px;
+  grid-area: text;
+  color: #091c7e;
+  font-size: 10px;
 }
 
 #limits .limit strong {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 #int-payments {
-    display: grid;
-    grid-area: payments;
-    padding: 32px;
-    margin: 0px 20px;
-    gap: 8px;
+  display: grid;
+  grid-area: payments;
+  padding: 32px;
+  margin: 0px 20px;
+  gap: 8px;
 }
 
 #int-payments .summary {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 #int-payments .payment-status {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: 104px;
-    padding: 8px;
-    border-right: #ffffff 0.6px solid;
-    border-left: #ffffff 0.6px solid;
-    cursor: pointer;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  padding: 8px;
+  border-right: #ffffff 0.6px solid;
+  border-left: #ffffff 0.6px solid;
+  cursor: pointer;
 }
 
 #int-payments .payment-status .status {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: 104px;
-    padding: 16px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #8f8888;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8f8888;
 }
 
 #int-payments .payment-status .counter {
-    justify-self: center;
-    font-size: 20px;
-    font-weight: 600;
+  justify-self: center;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 #recent-activities {
-    display: grid;
-    grid-area: recent-activities;
-    gap: 24px;
-    padding: 32px;
-    border-top: #ffffff 0.6px solid;
-    border-left: #ffffff 0.6px solid;
+  display: grid;
+  grid-area: recent-activities;
+  gap: 24px;
+  padding: 32px;
+  border-top: #ffffff 0.6px solid;
+  border-left: #ffffff 0.6px solid;
 }
 
 #recent-activities .activity {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 4px;
-    color: #8f8888;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 4px;
+  color: #8f8888;
 }
 
 #recent-activities .activity .name-desc {
-    grid-template-rows: auto auto;
-    padding: 8px;
-    gap: 4px;
+  grid-template-rows: auto auto;
+  padding: 8px;
+  gap: 4px;
 }
 
 #recent-activities .activity .description {
-    font-size: 14px;
-    font-weight: 200;
+  font-size: 14px;
+  font-weight: 200;
 }
 
 #recent-activities .activity .activity-value {
-    justify-self: end;
-    font-size: 16px;
-    font-weight: 400;
+  justify-self: end;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-@media (max-width: 1024px) {
-    body {
-        display: grid;
-        grid-template-columns: 75px 1fr;
-    }
+@media (max-width: 480px) {
+  body {
+    grid-template-columns: 55px 1fr;
+  }
 
-    #sidebar {
-        grid-template-rows: auto;
-        align-items: center;
-        justify-content: center;
-    }
+  .title-section {
+    font-size: 12px;
+  }
 
-    #sidebar #sidebar-logo h1 {
-        display: none;
-    }
+  .button {
+    font-size: 12px;
+  }
 
-    #sidebar .list {
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-    }
+  #sidebar {
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+  }
 
-    #sidebar .list button {
-        grid-template-columns: auto;
-        justify-content: center;
-        padding: 8px;
-    }
+  #sidebar #sidebar-logo h1 {
+    display: none;
+  }
 
-    #sidebar .list button label {
-        display: none;
-    }
+  #sidebar .list {
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
 
+  #sidebar .list button {
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  #sidebar .list button label {
+    display: none;
+  }
+
+  main {
+    grid-template-areas: "header header" "cards cards" "limits limits" "payments payments" "recent-activities recent-activities";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    overflow-y: auto;
+  }
+
+  #header {
+    padding: 16px 24px 16px 24px;
+  }
+
+  #header h1 {
+    font-size: 20px;
+  }
+
+  #header img {
+    justify-self: start;
+    margin: 0px 0px 0px 48px;
+    width: 36px;
+  }
+
+  #cards #cards-carousel {
+    gap: 32px;
+    padding: 8px 24px 8px 24px;
+  }
+
+  #cards .card {
+    width: 260px;
+    height: 180px;
+  }
+
+  #cards .card img {
+    width: 24px;
+  }
+
+  #cards .card .current-amount {
+    font-size: 16px;
+  }
+
+  #cards .card .card-number,
+  .card-date {
+    font-size: 12px;
+  }
+
+  #cards .card:active {
+    transform: scale(1);
+  }
+
+  #limits {
+    padding: 32px;
+    margin: 24px 16px 24px 16px;
+  }
+
+  #limits .limit {
+    grid-template-areas: "img img" "title titlet" "text text";
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+  }
+
+  #limits .limit h4 {
+    font-size: 16px;
+  }
+
+  #limits .limit img {
+    width: 40px;
+  }
+
+  #limits .limit strong {
+    font-size: 14px;
+  }
+
+  #limits .limit p {
+    font-size: 12px;
+  }
+
+  #limits .limit strong {
+    font-size: 15px;
+  }
+
+  #int-payments {
+    padding: 8px;
+  }
+
+  #int-payments .payment-status {
+    padding: 8px 32px 8px 32px;
+    width: 60px;
+    border: none;
+  }
+
+  #int-payments .payment-status .status {
+    font-size: 12px;
+  }
+
+  #int-payments .payment-status .counter {
+    font-size: 15px;
+  }
+
+  #recent-activities {
+    gap: 16px;
+    padding: 24px;
+  }
+
+  #recent-activities .activity {
+    gap: 8px;
+  }
+
+  #recent-activities .activity .name-desc {
+    padding: 8px;
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  #recent-activities .activity .description {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  #recent-activities .activity .activity-value {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
