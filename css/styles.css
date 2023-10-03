@@ -2,7 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Kanit", sans-serif, "Roboto", sans-serif;
+  font-family: "Kanit";
+}
+
+:root {
+  --primary-bg-color: #f8f8f8;
+  --secundary-bg-color: #ffffff;
+  --button-bg-color: #dadae6;
+  --primary-text-color: #091c7e;
+  --secundary-text-color: #8f8888;
+  --mix-blend-mode: multiply;
 }
 
 body {
@@ -10,7 +19,6 @@ body {
   grid-template-columns: 250px 1fr;
   height: 100vh;
   width: 100vw;
-  background-color: #f8f8f8;
 }
 
 .title-section {
@@ -27,31 +35,31 @@ body {
   padding: 8px;
   border: none;
   border-radius: 3px;
-  background-color: #dadae6;
+  background-color: var(--button-bg-color);
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: #8f8888;
+  color: var(--secundary-text-color);
 }
 
 .day {
   font-size: 12px;
-  color: #8f8888;
+  color: var(--secundary-text-color);
 }
 
 #sidebar {
   display: grid;
   grid-template-rows: auto 1fr;
-  background-color: #ffffff;
+  background-color: var(--secundary-bg-color);
   box-shadow: 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding-top: 20px;
+  padding-top: 24px;
 }
 
 #sidebar h1 {
   font-size: 25px;
   font-weight: 600;
-  color: #091c7e;
+  color: var(--primary-text-color);
   padding: 0px 16px 0px 16px;
 }
 
@@ -88,9 +96,9 @@ body {
 }
 
 #sidebar .list button:hover {
-  background-color: #dadae6;
-  border-radius: 5px;
-  color: #091c7e;
+  background-color: var(--button-bg-color);
+  border-radius: 10px;
+  color: var(--primary-text-color);
 }
 
 main {
@@ -100,6 +108,7 @@ main {
   grid-template-rows: auto auto 148px auto;
   align-items: start;
   overflow-y: auto;
+  background-color: var(--primary-bg-color);
 }
 
 #header {
@@ -118,7 +127,7 @@ main {
 
 #header img {
   justify-self: end;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--mix-blend-mode);
   width: 48px;
 }
 
@@ -144,24 +153,23 @@ main {
   height: 200px;
   border: none;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--secundary-bg-color);
 }
 
 #cards .card img {
   justify-self: start;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--mix-blend-mode);
   width: 32px;
 }
 
 #cards .card .current-amount {
-  color: black;
   font-size: 20px;
   font-weight: 200;
 }
 
 #cards .card .card-number,
 .card-date {
-  color: #ccc7c7;
+  color: var(--secundary-text-color);
   font-size: 15px;
   font-weight: 600;
 }
@@ -170,13 +178,13 @@ main {
   transform: scale(1.1);
   background-image: linear-gradient(to bottom left,
       #bd6e7e,
-      #ffffff,
+      var(--secundary-bg-color),
       #142fbc,
       #0b0d30);
 }
 
 #cards .card:active .current-amount {
-  color: white;
+  color: var(--secundary-bg-color);
 }
 
 #limits {
@@ -185,8 +193,8 @@ main {
   grid-area: limits;
   padding: 32px;
   margin: 8px 16px 8px 32px;
-  border-bottom: #ffffff 0.6px solid;
-  border-top: #ffffff 0.6px solid;
+  border-bottom: var(--secundary-bg-color) 0.6px solid;
+  border-top: var(--secundary-bg-color) 0.6px solid;
 }
 
 #limits .limit {
@@ -200,7 +208,7 @@ main {
 
 #limits .limit img {
   grid-area: img;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--mix-blend-mode);
 }
 
 #limits .limit h4 {
@@ -209,7 +217,7 @@ main {
 
 #limits .limit p {
   grid-area: text;
-  color: #091c7e;
+  color: var(--primary-text-color);
   font-size: 10px;
 }
 
@@ -221,7 +229,7 @@ main {
   display: grid;
   grid-area: payments;
   padding: 32px;
-  margin: 0px 20px;
+  margin: 0px 24px;
   gap: 8px;
 }
 
@@ -239,8 +247,8 @@ main {
   justify-content: center;
   width: 104px;
   padding: 8px;
-  border-right: #ffffff 0.6px solid;
-  border-left: #ffffff 0.6px solid;
+  border-right: var(--secundary-bg-color) 0.6px solid;
+  border-left: var(--secundary-bg-color) 0.6px solid;
   cursor: pointer;
 }
 
@@ -252,7 +260,7 @@ main {
   padding: 16px;
   font-size: 14px;
   font-weight: 600;
-  color: #8f8888;
+  color: var(--secundary-text-color);
 }
 
 #int-payments .payment-status .counter {
@@ -266,22 +274,22 @@ main {
   grid-area: recent-activities;
   gap: 24px;
   padding: 32px;
-  border-top: #ffffff 0.6px solid;
-  border-left: #ffffff 0.6px solid;
+  border-top: var(--secundary-bg-color) 0.6px solid;
+  border-left: var(--secundary-bg-color) 0.6px solid;
 }
 
 #recent-activities .activity {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 4px;
-  color: #8f8888;
+  gap: 8px;
+  color: var(--secundary-text-color);
 }
 
-#recent-activities .activity .name-desc {
+#recent-activities .activity .name-description {
   grid-template-rows: auto auto;
   padding: 8px;
-  gap: 4px;
+  gap: 8px;
 }
 
 #recent-activities .activity .description {
@@ -453,9 +461,9 @@ main {
     padding: 8px;
   }
 
-  #recent-activities .activity .name-desc {
+  #recent-activities .activity .name-description {
     padding: 8px;
-    gap: 4px;
+    gap: 8px;
     font-size: 14px;
   }
 
