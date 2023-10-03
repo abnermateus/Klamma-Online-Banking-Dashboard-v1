@@ -7,10 +7,10 @@
 
 :root {
   --primary-bg-color: #f8f8f8;
-  --secundary-bg-color: #ffffff;
+  --secondary-bg-color: #ffffff;
   --button-bg-color: #dadae6;
   --primary-text-color: #091c7e;
-  --secundary-text-color: #8f8888;
+  --secondary-text-color: #8f8888;
   --mix-blend-mode: multiply;
 }
 
@@ -39,18 +39,18 @@ body {
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: var(--secundary-text-color);
+  color: var(--secondary-text-color);
 }
 
 .day {
   font-size: 12px;
-  color: var(--secundary-text-color);
+  color: var(--secondary-text-color);
 }
 
 #sidebar {
   display: grid;
   grid-template-rows: auto 1fr;
-  background-color: var(--secundary-bg-color);
+  background-color: var(--secondary-bg-color);
   box-shadow: 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding-top: 24px;
@@ -153,7 +153,7 @@ main {
   height: 200px;
   border: none;
   border-radius: 10px;
-  background-color: var(--secundary-bg-color);
+  background-color: var(--secondary-bg-color);
 }
 
 #cards .card img {
@@ -169,7 +169,7 @@ main {
 
 #cards .card .card-number,
 .card-date {
-  color: var(--secundary-text-color);
+  color: var(--secondary-text-color);
   font-size: 15px;
   font-weight: 600;
 }
@@ -178,13 +178,13 @@ main {
   transform: scale(1.1);
   background-image: linear-gradient(to bottom left,
       #bd6e7e,
-      var(--secundary-bg-color),
+      var(--secondary-bg-color),
       #142fbc,
       #0b0d30);
 }
 
 #cards .card:active .current-amount {
-  color: var(--secundary-bg-color);
+  color: var(--secondary-bg-color);
 }
 
 #limits {
@@ -193,8 +193,8 @@ main {
   grid-area: limits;
   padding: 32px;
   margin: 8px 16px 8px 32px;
-  border-bottom: var(--secundary-bg-color) 0.6px solid;
-  border-top: var(--secundary-bg-color) 0.6px solid;
+  border-bottom: var(--secondary-bg-color) 0.6px solid;
+  border-top: var(--secondary-bg-color) 0.6px solid;
 }
 
 #limits .limit {
@@ -247,8 +247,8 @@ main {
   justify-content: center;
   width: 104px;
   padding: 8px;
-  border-right: var(--secundary-bg-color) 0.6px solid;
-  border-left: var(--secundary-bg-color) 0.6px solid;
+  border-right: var(--secondary-bg-color) 0.6px solid;
+  border-left: var(--secondary-bg-color) 0.6px solid;
   cursor: pointer;
 }
 
@@ -260,7 +260,7 @@ main {
   padding: 16px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--secundary-text-color);
+  color: var(--secondary-text-color);
 }
 
 #int-payments .payment-status .counter {
@@ -274,8 +274,8 @@ main {
   grid-area: recent-activities;
   gap: 24px;
   padding: 32px;
-  border-top: var(--secundary-bg-color) 0.6px solid;
-  border-left: var(--secundary-bg-color) 0.6px solid;
+  border-top: var(--secondary-bg-color) 0.6px solid;
+  border-left: var(--secondary-bg-color) 0.6px solid;
 }
 
 #recent-activities .activity {
@@ -283,7 +283,7 @@ main {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 8px;
-  color: var(--secundary-text-color);
+  color: var(--secondary-text-color);
 }
 
 #recent-activities .activity .name-description {
