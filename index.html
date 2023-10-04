@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../img/klamma-icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Klamma | Online Banking Dashboard</title>
+  </head>
+
+  <body>
+    <aside id="sidebar">
+      <container id="sidebar-logo">
+        <img src="../img/klamma-icon.png" id="klamma" />
+        <h1>Klamma</h1>
+      </container>
+      <container class="list">
+        <button>
+          <span class="material-symbols-outlined">home</span>
+          <label>Overview</label>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">credit_card</span>
+          <label>Cards</label>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">payments</span>
+          <label>Payments</label>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">analytics</span>
+          <label> Repots</label>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">contacts</span>
+          <label>Contacts </label>
+        </button>
+      </container>
+      <container class="list">
+        <button>
+          <span class="material-symbols-outlined">settings</span>
+          <label> Settings</label>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">person</span>
+          <label> Account</label>
+        </button>
+      </container>
+    </aside>
+
+    <main>
+      <header id="header">
+        <h1>Your Cards</h1>
+        <button class="button">New card&nbsp;&nbsp;&nbsp;&nbsp;+</button>
+        <img src="../img/bell-notification.png" />
+      </header>
+
+      <section id="cards">
+        <container id="cards-carousel">
+          <container class="card">
+            <img src="../img/klamma-icon.png" />
+            <span class="current-amount">1242.42 <strong>USD</strong></span>
+            <span class="card-number">5495 7381 3759 2321</span>
+            <span class="card-date">04&nbsp;/&nbsp;24</span>
+          </container>
+          <container class="card">
+            <img src="../img/klamma-icon.png" />
+            <span class="current-amount">249.00 <strong>EUR</strong></span>
+            <span class="card-number">4535 8933 1673 6770</span>
+            <span class="card-date">05&nbsp;/&nbsp;25</span>
+          </container>
+          <container class="card">
+            <img src="../img/klamma-icon.png" />
+            <span class="current-amount">249.00 <strong>EUR</strong></span>
+            <span class="card-number">5363 7205 7398 4138</span>
+            <span class="card-date">01&nbsp;/&nbsp;25</span>
+          </container>
+        </container>
+      </section>
+
+      <section id="limits">
+        <container class="limit">
+          <img src="../img/credit-limit-chart.png" />
+          <h4>Credit limit</h4>
+          <p><strong> 1500</strong> / 2000 USD</p>
+        </container>
+        <container class="limit">
+          <img src="../img/online-limit-chart.png" />
+          <h4>Online limit</h4>
+          <p><strong> 1324</strong> / 1500 USD</p>
+        </container>
+      </section>
+
+      <section id="int-payments">
+        <container class="title-section">
+          <h2>Int. Payments</h2>
+          <h6 class="day">the last 30 days</h6>
+        </container>
+        <container class="summary">
+          <container class="payment-status">
+            <span class="counter">8</span>
+            <span class="status">Awaiting</span>
+          </container>
+          <container class="payment-status">
+            <span class="counter">5</span>
+            <span class="status">In progress</span>
+          </container>
+          <container class="payment-status">
+            <span class="counter">12</span>
+            <span class="status">Completed</span>
+          </container>
+          <container class="payment-status">
+            <span class="counter">4</span>
+            <span class="status">Cancelled</span>
+          </container>
+        </container>
+      </section>
+
+      <section id="recent-activities">
+        <container class="title-section">
+          <h2>Recent Activities</h2>
+          <button class="button">View a report</button>
+        </container>
+        <container>
+          <h6 class="day">Today</h6>
+          <container>
+            <container class="activity">
+              <span class="material-symbols-outlined">send </span>
+              <container class="name-description">
+                <h4>To Martin Mitchel</h4>
+                <p class="description">Sent</p>
+              </container>
+              <p class="activity-value">- 3,004.52 <strong>USD</strong></p>
+            </container>
+
+            <container class="activity">
+              <span class="material-symbols-outlined"> send </span>
+              <container class="name-description">
+                <h4>To Jane Klamberberg</h4>
+                <p class="description">Sent</p>
+              </container>
+              <p class="activity-value">- 1,023.19 <strong>USD</strong></p>
+            </container>
+
+            <container class="activity">
+              <span class="material-symbols-outlined"> currency_exchange </span>
+              <container class="name-description">
+                <h4>EUR to USD</h4>
+                <p class="description">Conversion</p>
+              </container>
+              <p class="activity-value">+ 1,456.00 <strong>USD</strong></p>
+            </container>
+          </container>
+        </container>
+        <container>
+          <h6 class="day">Yesterday</h6>
+          <container>
+            <container class="activity">
+              <span class="material-symbols-outlined"> wallet </span>
+              <container class="name-description">
+                <h4>Starbucks</h4>
+                <p class="description">Cafe & Resturants</p>
+              </container>
+              <p class="activity-value">- 5.99 <strong>USD</strong></p>
+            </container>
+
+            <container class="activity">
+              <span class="material-symbols-outlined"> savings </span>
+              <container class="name-description">
+                <h4>Deposit to your USD balance</h4>
+                <p class="description">Opened</p>
+              </container>
+              <p class="activity-value">- 4,000.00 <strong>USD</strong></p>
+            </container>
+          </container>
+        </container>
+      </section>
+    </main>
+  </body>
+</html>
